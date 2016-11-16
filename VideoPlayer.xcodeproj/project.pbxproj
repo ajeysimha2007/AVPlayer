@@ -47,6 +47,7 @@
 		3D54B3521DDC2176009D7818 /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D54B3561DDC2176009D7818 /* VideoPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerUITests.swift; sourceTree = "<group>"; };
 		3D54B3581DDC2176009D7818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D54B3641DDC243A009D7818 /* VideoPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VideoPlayer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		3D54B3351DDC2176009D7818 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				3D54B3641DDC243A009D7818 /* VideoPlayer.entitlements */,
 				3D54B3361DDC2176009D7818 /* AppDelegate.swift */,
 				3D54B3381DDC2176009D7818 /* ViewController.swift */,
 				3D54B33A1DDC2176009D7818 /* Main.storyboard */,
@@ -193,7 +195,15 @@
 				TargetAttributes = {
 					3D54B3321DDC2176009D7818 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					3D54B3461DDC2176009D7818 = {
 						CreatedOnToolsVersion = 8.1;
@@ -410,7 +420,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VideoPlayer/VideoPlayer.entitlements;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,7 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VideoPlayer/VideoPlayer.entitlements;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
