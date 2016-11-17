@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     let seekSlider = UISlider()
     var playerRateBeforeSeek: Float = 0
     let loadingIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    var timeView:UIView = UIView()
 
     var moviePlayer:MPMoviePlayerController!
     override func viewDidLoad() {
@@ -63,10 +64,12 @@ class ViewController: UIViewController {
             
         } as AnyObject!
         
-        timeRemainingLabel.textColor = UIColor.gray
-        view.addSubview(timeRemainingLabel)
+        timeRemainingLabel.textColor = UIColor.white
+        view.addSubview(self.timeView)
+        self.timeView.backgroundColor = UIColor.black
+        timeView.addSubview(timeRemainingLabel)
         
-        view.addSubview(seekSlider)
+        timeView.addSubview(seekSlider)
         seekSlider.addTarget(self, action: #selector(sliderBeganTracking),
                              for: .touchDown)
         seekSlider.addTarget(self, action: #selector(sliderEndedTracking),
@@ -98,11 +101,12 @@ class ViewController: UIViewController {
         // Layout subviews manually
         avPlayerLayer.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 200.0)
         invisibleButton.frame = view.bounds
+        timeView.frame = CGRect(x: 0, y: 200, width: view.bounds.size.width, height: 30)
         let controlsHeight: CGFloat = 30
         let controlsY: CGFloat = view.bounds.size.height - controlsHeight
-        timeRemainingLabel.frame = CGRect(x: 30, y: 170, width: 80, height: controlsHeight)
+        timeRemainingLabel.frame = CGRect(x: 30, y: 0, width: 80, height: controlsHeight)
         seekSlider.frame = CGRect(x: timeRemainingLabel.frame.origin.x + timeRemainingLabel.bounds.size.width,
-                                  y: 170, width: view.bounds.size.width - timeRemainingLabel.bounds.size.width - 60, height: controlsHeight)
+                                  y: 0, width: view.bounds.size.width - timeRemainingLabel.bounds.size.width - 60, height: controlsHeight)
         loadingIndicatorView.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
     }
     

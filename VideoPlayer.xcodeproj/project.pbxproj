@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3D54B3371DDC2176009D7818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54B3361DDC2176009D7818 /* AppDelegate.swift */; };
-		3D54B3391DDC2176009D7818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54B3381DDC2176009D7818 /* ViewController.swift */; };
 		3D54B33C1DDC2176009D7818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D54B33A1DDC2176009D7818 /* Main.storyboard */; };
 		3D54B33E1DDC2176009D7818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D54B33D1DDC2176009D7818 /* Assets.xcassets */; };
 		3D54B3411DDC2176009D7818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D54B33F1DDC2176009D7818 /* LaunchScreen.storyboard */; };
 		3D54B34C1DDC2176009D7818 /* VideoPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54B34B1DDC2176009D7818 /* VideoPlayerTests.swift */; };
 		3D54B3571DDC2176009D7818 /* VideoPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54B3561DDC2176009D7818 /* VideoPlayerUITests.swift */; };
+		3D54B3651DDD86F6009D7818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D54B3381DDC2176009D7818 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D54B3391DDC2176009D7818 /* ViewController.swift in Sources */,
+				3D54B3651DDD86F6009D7818 /* ViewController.swift in Sources */,
 				3D54B3371DDC2176009D7818 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
